@@ -9,8 +9,8 @@ const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/dealls-dat
 
 mongoose
   .connect(MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   } as mongoose.ConnectOptions)
   .then(() => {
     console.log("Connected to MongoDB");

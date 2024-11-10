@@ -8,8 +8,8 @@ beforeAll(async () => {
     const uri = mongo.getUri();
 
     await mongoose.connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
     } as mongoose.ConnectOptions);
 });
 

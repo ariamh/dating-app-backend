@@ -11,7 +11,8 @@
     "seed:users": "ts-node src/models/seeders/userSeeder.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -60,6 +61,8 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
+    "setupFilesAfterEnv": ["./jest.setup.ts"],
+    "testMatch": ["**/tests/**/*.test.ts"],
     "moduleFileExtensions": [
       "ts",
       "tsx",

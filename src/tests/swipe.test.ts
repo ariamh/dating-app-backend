@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { swipe } from "../controllers/swipe.controller";
 import User from "../models/user.model";
 
-jest.mock("../models/User");
+jest.mock("../models/user.model");
 
 const mockedUser = User as jest.Mocked<typeof User>;
 

@@ -4,7 +4,7 @@ import { purchasePremium } from "../controllers/premium.controller";
 import User from "../models/user.model";
 import { AuthenticatedRequest } from "../middlewares/auth.middlewares";
 
-jest.mock("../models/User");
+jest.mock("../models/user.model");
 
 const mockedUser = User as jest.Mocked<typeof User>;
 
