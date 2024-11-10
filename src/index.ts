@@ -1,29 +1,23 @@
-import express from "express";
 import mongoose from "mongoose";
-import authRoutes from "./routes/auth.routes";
-import swipeRoutes from "./routes/swipe.routes";
-import purchasePremiumRoutes from "./routes/premium.routes";
 import dotenv from "dotenv";
+import app from "./app";
+
 dotenv.config();
 
-const app = express();
 const PORT = process.env.PORT || 5000;
-
-app.use(express.json());
-
-app.use("/api/auth", authRoutes);
-app.use("/api/swipe", swipeRoutes);
-app.use("/api/purchase-premium", purchasePremiumRoutes);
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/dealls-dating";
 
 mongoose
-  .connect("mongodb://localhost:27017/dealls-dating", {})
+  .connect(MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  } as mongoose.ConnectOptions)
   .then(() => {
-    console.log("Connect to MongoDB");
+    console.log("Connected to MongoDB");
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
   })
   .catch(err => {
-    console.error("Fail connect to MongoDB", err);
+    console.error("Failed to connect to MongoDB", err);
   });
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
