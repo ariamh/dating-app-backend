@@ -1,7 +1,7 @@
 import { Response, NextFunction, Request } from "express";
 import mongoose from "mongoose";
-import { swipe } from "../controllers/swipeController";
-import User from "../models/User";
+import { swipe } from "../controllers/swipe.controller";
+import User from "../models/user.model";
 
 jest.mock("../models/User");
 

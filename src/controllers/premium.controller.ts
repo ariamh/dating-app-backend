@@ -1,6 +1,6 @@
 import { Response } from "express";
-import { AuthenticatedRequest } from "../middlewares/authMiddlewares";
-import User from "../models/User";
+import { AuthenticatedRequest } from "../middlewares/auth.middlewares";
+import User from "../models/user.model";
 
 export const purchasePremium = async (
   req: AuthenticatedRequest,

@@ -5,7 +5,7 @@ import {
   validateRegister,
   validateLogin
   // rateLimiter
-} from "../controllers/authController";
+} from "../controllers/auth.controller";
 
 const router = Router();
 

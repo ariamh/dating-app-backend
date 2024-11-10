@@ -1,8 +1,8 @@
 import { Response } from "express";
 import mongoose from "mongoose";
-import { purchasePremium } from "../controllers/premiumController";
-import User from "../models/User";
-import { AuthenticatedRequest } from "../middlewares/authMiddlewares";
+import { purchasePremium } from "../controllers/premium.controller";
+import User from "../models/user.model";
+import { AuthenticatedRequest } from "../middlewares/auth.middlewares";
 
 jest.mock("../models/User");
 

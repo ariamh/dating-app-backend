@@ -1,8 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
-import authRoutes from "./routes/auth";
-import swipeRoutes from "./routes/swipe";
-import purchasePremiumRoutes from "./routes/premium";
+import authRoutes from "./routes/auth.routes";
+import swipeRoutes from "./routes/swipe.routes";
+import purchasePremiumRoutes from "./routes/premium.routes";
 import dotenv from "dotenv";
 dotenv.config();
 

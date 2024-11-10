@@ -5,8 +5,8 @@ import {
   login,
   validateRegister,
   validateLogin
-} from "../controllers/authController";
-import User, { IUser } from "../models/User";
+} from "../controllers/auth.controller";
+import User, { IUser } from "../models/user.model";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 

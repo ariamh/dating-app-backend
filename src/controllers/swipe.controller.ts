@@ -1,7 +1,7 @@
 import { Response, NextFunction } from "express";
 import mongoose from "mongoose";
-import User from "../models/User";
-import { AuthenticatedRequest } from "../middlewares/authMiddlewares";
+import User from "../models/user.model";
+import { AuthenticatedRequest } from "../middlewares/auth.middlewares";
 
 const MAX_DAILY_SWIPES = 10;
 

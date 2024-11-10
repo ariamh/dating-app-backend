@@ -1,7 +1,7 @@
 import { RequestHandler } from "express";
 import { body, validationResult } from "express-validator";
 import rateLimit from "express-rate-limit";
-import User from "../models/User";
+import User from "../models/user.model";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";

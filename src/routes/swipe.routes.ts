@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { swipe } from "../controllers/swipeController";
-import { authenticateToken } from "../middlewares/authMiddlewares";
+import { swipe } from "../controllers/swipe.controller";
+import { authenticateToken } from "../middlewares/auth.middlewares";
 
 const router = Router();
 

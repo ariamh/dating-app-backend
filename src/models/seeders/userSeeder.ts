@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
-import User, { IUser } from "../User";
+import User, { IUser } from "../user.model";
 
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost:27017/dealls-dating";
