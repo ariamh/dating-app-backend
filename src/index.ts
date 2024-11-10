@@ -16,17 +16,14 @@ app.use("/api/swipe", swipeRoutes);
 app.use("/api/purchase-premium", purchasePremiumRoutes);
 
 mongoose
-	.connect(
-		"mongodb://localhost:27017/dealls-dating",
-		{},
-	)
-	.then(() => {
-		console.log("Connect to MongoDB");
-	})
-	.catch((err) => {
-		console.error("Fail connect to MongoDB", err);
-	});
+  .connect("mongodb://localhost:27017/dealls-dating", {})
+  .then(() => {
+    console.log("Connect to MongoDB");
+  })
+  .catch(err => {
+    console.error("Fail connect to MongoDB", err);
+  });
 
 app.listen(PORT, () => {
-	console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
